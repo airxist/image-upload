@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./normalize.css">
+  <link rel="stylesheet" href="./styles.css">
+  <title>Emage Upload</title>
+</head>
+<body>
+  <form class="product-form">
+    <h1 class="title">Image Upload</h1>
+    <!-- single form row -->
+    <div class="form-row">
+      <label for="name">Name</label>
+      <input type="text" id="name" value="Computer"/>
+    </div>
+    <!-- end of single form row -->
+    <!-- single form row -->
+    <div class="form-row">
+      <label for="price">Price</label>
+      <input type="number" id="price" value="77"/>
+    </div>
+    <!-- end of single form row -->
+    <!-- single form row -->
+    <div class="form-row">
+      <label for="photo">Image File</label>
+      <input type="file" id="photo" accept="image/*"/>
+    </div>
+    <!-- end of single form row -->
+     <button class="btn">
+      <span>Upload File</span>
+     </button>
+  </form>
+  <section class="product-container">
+  </section>
+
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="./browserApp.js"></script>
+</body>
+</html>

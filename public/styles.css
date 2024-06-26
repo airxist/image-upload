@@ -1,0 +1,69 @@
+@font-face {
+  font-family: DMsans;
+  src: url(./font/DMSans_18pt-Regular.ttf);
+}
+
+body {
+  min-height: 100vh;
+  background-color: rgb(250, 213, 179);
+  font-family: DMsans;
+}
+
+.product-form {
+  width: 100%;
+  max-width: 300px;
+  margin: 30px auto;
+  padding: 20px 30px;
+  background-color: white;
+  filter: drop-shadow(0 0 2px rgb(230, 217, 217));
+  border-radius: 10px;
+}
+
+.title {
+  text-align: center;
+}
+
+.form-row {
+  margin: 20px auto
+}
+
+.form-row input {
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.btn {
+  width: 100%;
+  background-color: rgb(226, 149, 32);
+  border: none;
+  outline: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: blue;
+}
+
+.btn span {
+  color: white;
+  font-family: DMsans;
+}
+
+.product {
+  width: 100px;
+  height: 250px;
+  border: border 2px black;
+}
+
+.image-container {
+  width: 100%;
+  height: 200px;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+
+}
