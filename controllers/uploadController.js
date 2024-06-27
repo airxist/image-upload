@@ -40,6 +40,7 @@ const uploadImageCloud = async (req, res) => {
     use_filename: true,
     folder: 'image-uploads'
   })
+  console.log(req.files.photo.tempFilePath);
   fs.unlinkSync(req.files.photo.tempFilePath)
   res.status(StatusCodes.OK).json({
     photo: {
