@@ -8,12 +8,13 @@ const productName = document.querySelector('#name');
 const productPrice = document.querySelector('#price');
 const photo = document.querySelector('#photo');
 // contaner 
-const container = document.querySelector('.container');
+const container = document.querySelector('.product-container');
 // declare a var
 let imageSource
 
 // functions
 const handleSubmit = async (e) => {
+  console.log("submitting form")
   e.preventDefault();
   const product = {
     name: productName.value,
@@ -23,10 +24,9 @@ const handleSubmit = async (e) => {
 
   try {
     const { data } = await axios.post(url, product);
-    console.log(data);
     fetchPhotos();
   } catch (error) {
-    console.log(error.response.data.msg);
+    console.log(error);
   }
   imageSource = null;
 }
@@ -47,7 +47,7 @@ const handleChange = async (e) => {
     });
     imageSource = src;
   } catch (error) {
-    console.log(error.response.data.msg);
+    console.log(error);
     imageSource = null;
   }
 }
@@ -78,6 +78,8 @@ const fetchPhotos = async () => {
 }
 
 // adding event listeners
-fileFormDOM.addEventListener('submit', e => handleSubmit(e));
+// fileFormDOM.addEventListener('submit', e => handleSubmit(e));
+
+btn.addEventListener('click', e => handleSubmit(e))
 
 photo.addEventListener('change', e => handleChange(e))

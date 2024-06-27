@@ -3,10 +3,7 @@ const ProductSchema = require('../model/Product');
 
 const getProducts = async (req, res) => {
   const products = await ProductSchema.find({});
-  console.log(products)
-  res.status(StatusCodes.OK).json({
-    products
-  })
+  res.status(StatusCodes.OK).json({ products })
 }
 const createProduct = async (req, res) => {
   await ProductSchema.create(req.body)
